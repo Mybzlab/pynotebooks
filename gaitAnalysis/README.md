@@ -1,3 +1,5 @@
+! Please note: Videos not included. DLC models not included
+
 # Insect analysis
 This repo contains everything related to my thesis, with the exception of some videos that are too large to store, and the DLC models.
 
