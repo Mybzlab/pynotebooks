@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+def generate_colorbar():
+    # Create a colormap that goes from red to green
+    cmap = mcolors.LinearSegmentedColormap.from_list('red_green', ['black', 'white'])
+
+    # Create a scalar mappable object with the colormap
+    norm = mcolors.Normalize(vmin=0, vmax=100)
+    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+    sm.set_array([])
+
+    # Create a figure and a dummy plot
+    fig, ax = plt.subplots(figsize=(10, 10))
+    fig.subplots_adjust(bottom=0.5)
+
+    # Add the colorbar to the dummy plot
+    cbar = fig.colorbar(sm, orientation='vertical', ax=ax)
+    cbar.set_label('Relative force (%)')
+
+    # Set the title and labels
+    ax.remove()  # Remove the dummy plot
+    # plt.title('Force')
+    plt.show()
+
+if __name__ == "__main__":
+    generate_colorbar()

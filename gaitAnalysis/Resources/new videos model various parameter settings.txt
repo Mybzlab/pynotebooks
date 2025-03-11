@@ -1,0 +1,16 @@
+contrast:20
+brightness:10
+gamma: dont change
+left out video 27
+
+in config.yaml:
+bodyparts order:
+frontright,frontleft,midright,midleft,backright,backleft,head,tail
+
+in pose_cfg.yml
+set fliplr to true
+add symmetric pairs
+
+Idea:
+slowly reduce the pos_dist_thresh to be more strict on your model
+

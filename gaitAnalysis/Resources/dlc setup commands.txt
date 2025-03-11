@@ -1,0 +1,16 @@
+deeplabcut.create_new_project('Locust2','Mart', [r'A:\Uni hdd\New Thesis\DLC\Videos\locust\locust.mp4'],working_directory=r'A:\Uni hdd\New Thesis\DLC',copy_videos=True)
+config_path = r'A:\Uni hdd\New Thesis\DLC\Locust2-Mart-2024-09-13\config.yaml'
+deeplabcut.analyze_videos(config_path,[r'A:\Uni hdd\New Thesis\DLC\Videos\locust\locust.mp4'], shuffle=1, save_as_csv=True, videotype='.mp4')
+deeplabcut.create_labeled_video(config_path,[r'A:\Uni hdd\New Thesis\DLC\Videos\locust\locust.mp4'])
+
+deeplabcut.launch_dlc()
+
+bodyparts:
+- frontright
+- frontleft
+- midright
+- midleft
+- backright
+- backleft
+- head
+- tail
